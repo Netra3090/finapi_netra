@@ -22,6 +22,7 @@ def test_client_valuation():
 def test_get_portfolio():
     r = requests.get(f"{BASE_URL}/api/portfolio/P001", timeout=5)
     assert r.status_code == 200
+    
     data = r.json()
     assert data["PortfolioID"] == "P001"
 
